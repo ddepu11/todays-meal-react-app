@@ -7,6 +7,7 @@ import About from "./Components/About";
 import Contact from "./Components/Contact";
 import Services from "./Components/Services";
 import Meal from "./Components/Meal";
+import Error from "./Components/Error";
 
 function App() {
   return (
@@ -27,6 +28,14 @@ function App() {
           <Route path="/meal/:id" component={Meal} />
           <Route path="/services">
             <Services />
+          </Route>
+
+          <Route exact path="/error">
+            <Error />
+          </Route>
+
+          <Route path="*">
+            <Error />
           </Route>
         </Switch>
       </Router>

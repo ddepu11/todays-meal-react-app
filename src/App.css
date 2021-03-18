@@ -183,3 +183,31 @@ form button {
   letter-spacing: 6px;
   text-transform: uppercase;
 }
+/* Error */
+.error {
+  text-align: center;
+  margin-top: 60px;
+  padding: 20px;
+  margin-top: 50px;
+  font-size: 1.8em;
+  line-height: 1.5;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+.home-btn {
+  font-size: 0.8em;
+  margin-top: 20px;
+  background: #111;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+.about {
+  text-align: center;
+  margin-top: 60px;
+  padding: 20px;
+  margin-top: 50px;
+  font-size: 1.2em;
+  line-height: 1.4;
+  letter-spacing: 3px;
+  text-transform: capitalize;
+}
