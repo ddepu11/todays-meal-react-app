@@ -1,14 +1,17 @@
 import { useEffect } from "react";
 import { useGlobalContext } from "./context";
-const url = `https://www.themealdb.com/api/json/v1/1/filter.php?c=`;
 
-const useGlobalFetch = () => {
+const useGlobalFetch = (url, id) => {
   let { keyword } = useGlobalContext();
   const { setMenu } = useGlobalContext();
 
   async function fetchRequest() {
     if (keyword === "") {
       keyword = "Chicken";
+    }
+
+    if (id !== null && id !== undefined) {
+      keyword = id.toString();
     }
 
     try {

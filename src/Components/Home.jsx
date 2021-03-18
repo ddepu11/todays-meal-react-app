@@ -1,9 +1,14 @@
 import React, { useRef, useEffect } from "react";
 import { useGlobalContext } from "../context";
+import { Link } from "react-router-dom";
+import { useGlobalFetch } from "../useGlobalFetch";
+let url = `https://www.themealdb.com/api/json/v1/1/filter.php?c=`;
 
 export default function Home() {
-  const { setKeyword, menu } = useGlobalContext();
+  const { setKeyword, menu, keword } = useGlobalContext();
   const inputRef = useRef(null);
+
+  useGlobalFetch(url);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -24,10 +29,10 @@ export default function Home() {
         {menu.map((item, index) => {
           const { idMeal, strMeal, strMealThumb } = item;
           return (
-            <div key={index} className="meal card">
+            <Link to={`/meal/${idMeal}`} key={index} className="meal card">
               <img src={strMealThumb} alt={strMeal} />
               <p>{strMeal}</p>
-            </div>
+            </Link>
           );
         })}
       </section>

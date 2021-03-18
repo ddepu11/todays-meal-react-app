@@ -7,9 +7,9 @@ import Home from "./Components/Home";
 import About from "./Components/About";
 import Contact from "./Components/Contact";
 import Services from "./Components/Services";
+import Meal from "./Components/Meal";
 
 function App() {
-  useGlobalFetch();
   return (
     <div className="container">
       <Router>
@@ -19,15 +19,13 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-
           <Route path="/about">
             <About />
           </Route>
-
           <Route path="/contact">
             <Contact />
           </Route>
-
+          <Route path="/meal/:id" component={Meal} />
           <Route path="/services">
             <Services />
           </Route>
