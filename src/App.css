@@ -270,3 +270,13 @@ form button {
   font-size: 2em;
   cursor: pointer;
 }
+/* Services */
+.service {
+  margin-top: 60px;
+  text-align: center;
+  padding: 50px;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #333;
+}

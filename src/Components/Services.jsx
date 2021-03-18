@@ -2,8 +2,8 @@ import React from "react";
 
 export default function Services() {
   return (
-    <div>
-      <h3>Services</h3>
+    <div className="service">
+      <h3>Services Page</h3>
     </div>
   );
 }
