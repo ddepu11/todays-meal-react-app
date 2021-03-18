@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/todays-meal-react-app/static/css/main.47bc83e1.chunk.css",
-    "main.js": "/todays-meal-react-app/static/js/main.e2d1e235.chunk.js",
-    "main.js.map": "/todays-meal-react-app/static/js/main.e2d1e235.chunk.js.map",
+    "main.js": "/todays-meal-react-app/static/js/main.4935b131.chunk.js",
+    "main.js.map": "/todays-meal-react-app/static/js/main.4935b131.chunk.js.map",
     "runtime-main.js": "/todays-meal-react-app/static/js/runtime-main.87a64e0f.js",
     "runtime-main.js.map": "/todays-meal-react-app/static/js/runtime-main.87a64e0f.js.map",
     "static/js/2.2c5a01fc.chunk.js": "/todays-meal-react-app/static/js/2.2c5a01fc.chunk.js",
@@ -16,6 +16,6 @@
     "static/js/runtime-main.87a64e0f.js",
     "static/js/2.2c5a01fc.chunk.js",
     "static/css/main.47bc83e1.chunk.css",
-    "static/js/main.e2d1e235.chunk.js"
+    "static/js/main.4935b131.chunk.js"
   ]
 }
