@@ -3,7 +3,6 @@ import { useGlobalContext } from "../context";
 import { Link, Redirect } from "react-router-dom";
 import { useGlobalFetch } from "../useGlobalFetch";
 import Loading from "./Loading";
-import Error from "./Error";
 
 let url = `https://www.themealdb.com/api/json/v1/1/filter.php?c=`;
 
