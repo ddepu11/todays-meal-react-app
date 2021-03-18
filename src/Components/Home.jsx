@@ -24,11 +24,15 @@ export default function Home() {
   return (
     <>
       {error === true ? (
-        <Error />
+        <Redirect to="/error" />
       ) : (
         <main className="hero">
           <form onSubmit={handleSubmit}>
-            <input ref={inputRef} type="text" placeholder="Search Meal" />
+            <input
+              ref={inputRef}
+              type="text"
+              placeholder="Search Meal Ny Category"
+            />
             <button type="submit">Search</button>
             <span className="example">
               Ex:- Vegetarian, Seafood, Chicken, Dessert, Vegan, Lamb,
