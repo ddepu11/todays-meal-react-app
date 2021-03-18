@@ -8,28 +8,31 @@ import {
 
 export default function Contact() {
   return (
-    <div>
+    <div className="contact">
       <header>
         <h1>Contact Us</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Error animi
-          pariatur laborum ducimus, autem veniam iusto excepturi cum numquam
+          pariatur laborum
         </p>
       </header>
-      <aside className="aside">
+
+      <aside className="aside flex">
         <div>
           <h3>Address</h3>
-          <span>utem veniam iusto excepturi cum numquam</span>
+          <span>8569, Delhi, India</span>
         </div>
+
         <div>
           <h3>Email</h3>
           <span>xyz_mno@gmail.com</span>
         </div>
       </aside>
+
       <section className="section">
         <h3>Phone</h3>
-        <span>15769+895</span>
-        <div className="social-links">
+        <span>157694895</span>
+        <div className="social-links flex">
           <FaGithubSquare />
           <FaFacebookSquare />
           <FaTwitterSquare />
