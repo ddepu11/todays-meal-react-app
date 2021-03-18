@@ -2,11 +2,9 @@ import { useEffect } from "react";
 import { useGlobalContext } from "./context";
 
 const useGlobalFetch = (url, id) => {
-  let { keyword } = useGlobalContext();
-  const { setMenu, setLoading } = useGlobalContext();
+  let { keyword, setMenu, setLoading, setError } = useGlobalContext();
 
   async function fetchRequest() {
-    
     setLoading(true);
 
     if (keyword === "") {
@@ -21,17 +19,19 @@ const useGlobalFetch = (url, id) => {
       const res = await fetch(url + keyword);
       const { meals } = await res.json();
 
-      console.log(meals);
-
       if (meals === null) {
         setMenu([]);
+        setLoading(false);
+        setError(true);
       } else {
         setMenu(meals);
         setLoading(false);
       }
     } catch (error) {
       console.log(error);
+      setLoading(false);
       setMenu([]);
+      setError(true);
     }
   }
 

@@ -6,10 +6,20 @@ const AppProvider = ({ children }) => {
   const [menu, setMenu] = useState([]);
   const [loading, setLoading] = useState(true);
   const [keyword, setKeyword] = useState("");
+  const [error, setError] = useState(false);
 
   return (
     <AppContext.Provider
-      value={{ menu, setMenu, keyword, setKeyword, loading, setLoading }}
+      value={{
+        menu,
+        setMenu,
+        keyword,
+        setKeyword,
+        loading,
+        setLoading,
+        error,
+        setError,
+      }}
     >
       {children}
     </AppContext.Provider>

@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { useGlobalFetch } from "../useGlobalFetch";
 import { useGlobalContext } from "../context";
-
+import Loading from "./Loading";
 export default function Meal() {
   const { id } = useParams();
   useGlobalFetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=`, id);
@@ -12,11 +12,11 @@ export default function Meal() {
     loading === false && menu[0];
 
   return (
-    <main className="hero one-meal">
+    <>
       {loading ? (
-        <h1>Loading...</h1>
+        <Loading />
       ) : (
-        <>
+        <main className="hero one-meal">
           <img src={strMealThumb} alt="" />
           <div className="details">
             <div className="flex c common">
@@ -34,8 +34,8 @@ export default function Meal() {
               <span>{strInstructions}</span>
             </div>
           </div>
-        </>
+        </main>
       )}
-    </main>
+    </>
   );
 }

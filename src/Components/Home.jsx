@@ -2,11 +2,13 @@ import React, { useRef, useEffect } from "react";
 import { useGlobalContext } from "../context";
 import { Link } from "react-router-dom";
 import { useGlobalFetch } from "../useGlobalFetch";
+import Loading from "./Loading";
+
 let url = `https://www.themealdb.com/api/json/v1/1/filter.php?c=`;
 
 export default function Home() {
   useGlobalFetch(url);
-  const { setKeyword, menu } = useGlobalContext();
+  const { setKeyword, menu, loading, error } = useGlobalContext();
   const inputRef = useRef(null);
 
   function handleSubmit(e) {
@@ -19,22 +21,36 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="hero">
-      <form onSubmit={handleSubmit}>
-        <input ref={inputRef} type="text" placeholder="Search Meal" />
-        <button type="submit">Search</button>
-      </form>
-      <section className="meals grid">
-        {menu.map((item, index) => {
-          const { idMeal, strMeal, strMealThumb } = item;
-          return (
-            <Link to={`/meal/${idMeal}`} key={index} className="meal card">
-              <img src={strMealThumb} alt={strMeal} />
-              <p>{strMeal}</p>
-            </Link>
-          );
-        })}
-      </section>
-    </main>
+    <>
+      {error ? (
+        <h1>Error</h1>
+      ) : (
+        <main className="hero">
+          <form onSubmit={handleSubmit}>
+            <input ref={inputRef} type="text" placeholder="Search Meal" />
+            <button type="submit">Search</button>
+          </form>
+          <section className="meals grid">
+            {loading ? (
+              <Loading />
+            ) : (
+              menu.map((item, index) => {
+                const { idMeal, strMeal, strMealThumb } = item;
+                return (
+                  <Link
+                    to={`/meal/${idMeal}`}
+                    key={index}
+                    className="meal card"
+                  >
+                    <img src={strMealThumb} alt={strMeal} />
+                    <p>{strMeal}</p>
+                  </Link>
+                );
+              })
+            )}
+          </section>
+        </main>
+      )}
+    </>
   );
 }
