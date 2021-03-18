@@ -10,13 +10,15 @@ const useGlobalFetch = () => {
     if (keyword === "") {
       keyword = "Chicken";
     }
+
     try {
       const res = await fetch(url + keyword);
       const { meals } = await res.json();
       console.log(meals);
-      setMenu(meals);
+      meals === null ? setMenu([]) : setMenu(meals);
     } catch (error) {
       console.log(error);
+      setMenu([]);
     }
   }
 
