@@ -506,4 +506,10 @@ form button {
     padding: 8px 16px;
     border-radius: 0px;
   }
+  .loading {
+    padding: 15px;
+    margin-top: 40px;
+    font-size: 1.2em;
+    letter-spacing: 4px;
+  }
 }
