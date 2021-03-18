@@ -193,6 +193,7 @@ form button {
   line-height: 1.5;
   letter-spacing: 5px;
   text-transform: uppercase;
+  color: #333;
 }
 .home-btn {
   font-size: 0.8em;
@@ -210,6 +211,7 @@ form button {
   line-height: 1.4;
   letter-spacing: 3px;
   text-transform: capitalize;
+  color: #333;
 }
 /* Contact Component */
 .contact {
@@ -279,4 +281,10 @@ form button {
   text-transform: uppercase;
   letter-spacing: 3px;
   color: #333;
+}
+.example {
+  display: block;
+  padding: 10px 0 0;
+  letter-spacing: 1px;
+  word-spacing: 5px;
 }

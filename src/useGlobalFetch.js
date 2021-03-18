@@ -26,16 +26,18 @@ const useGlobalFetch = (url, id) => {
       const res = await fetch(url + keyword);
       const { meals } = await res.json();
 
+      console.log(meals);
+
       if (meals === null) {
         setMenu([]);
         setLoading(false);
         setError(true);
+        setKeyword("");
       } else {
         setLoading(false);
         setError(false);
         setMenu(meals);
       }
-      setKeyword("");
     } catch (error) {
       console.log(error);
       setError(true);

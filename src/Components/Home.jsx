@@ -9,7 +9,7 @@ let url = `https://www.themealdb.com/api/json/v1/1/filter.php?c=`;
 
 export default function Home() {
   useGlobalFetch(url);
-  const { setKeyword, menu, loading, error, setError } = useGlobalContext();
+  const { setKeyword, menu, loading, error } = useGlobalContext();
   const inputRef = useRef(null);
 
   function handleSubmit(e) {
@@ -18,21 +18,22 @@ export default function Home() {
   }
 
   useEffect(() => {
-    setError(false);
-    // setTimeout(() => {
-    //   inputRef.current.focus();
-    // }, 2000);
+    inputRef.current.focus();
   }, []);
 
   return (
     <>
       {error === true ? (
-        <Redirect to="/error" />
+        <Error />
       ) : (
         <main className="hero">
           <form onSubmit={handleSubmit}>
             <input ref={inputRef} type="text" placeholder="Search Meal" />
             <button type="submit">Search</button>
+            <span className="example">
+              Ex:- Vegetarian, Seafood, Chicken, Dessert, Vegan, Lamb,
+              Breakfast, Miscellaneous, Pasta, Starter
+            </span>
           </form>
           <section className="meals grid">
             {loading ? (
