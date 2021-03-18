@@ -1,5 +1,6 @@
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { useGlobalFetch } from "./useGlobalFetch";
 
 import Navbar from "./Components/Navbar";
 import Home from "./Components/Home";
@@ -8,6 +9,7 @@ import Contact from "./Components/Contact";
 import Services from "./Components/Services";
 
 function App() {
+  useGlobalFetch();
   return (
     <div className="container">
       <Router>
