@@ -3,9 +3,12 @@ import { useGlobalContext } from "./context";
 
 const useGlobalFetch = (url, id) => {
   let { keyword } = useGlobalContext();
-  const { setMenu } = useGlobalContext();
+  const { setMenu, setLoading } = useGlobalContext();
 
   async function fetchRequest() {
+    
+    setLoading(true);
+
     if (keyword === "") {
       keyword = "Chicken";
     }
@@ -17,8 +20,15 @@ const useGlobalFetch = (url, id) => {
     try {
       const res = await fetch(url + keyword);
       const { meals } = await res.json();
+
       console.log(meals);
-      meals === null ? setMenu([]) : setMenu(meals);
+
+      if (meals === null) {
+        setMenu([]);
+      } else {
+        setMenu(meals);
+        setLoading(false);
+      }
     } catch (error) {
       console.log(error);
       setMenu([]);
@@ -26,8 +36,6 @@ const useGlobalFetch = (url, id) => {
   }
 
   useEffect(() => fetchRequest(), [keyword]);
-
-  return useGlobalContext();
 };
 
 export { useGlobalFetch };

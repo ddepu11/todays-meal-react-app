@@ -1,6 +1,5 @@
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { useGlobalFetch } from "./useGlobalFetch";
 
 import Navbar from "./Components/Navbar";
 import Home from "./Components/Home";

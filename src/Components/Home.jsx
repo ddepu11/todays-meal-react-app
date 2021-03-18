@@ -5,10 +5,9 @@ import { useGlobalFetch } from "../useGlobalFetch";
 let url = `https://www.themealdb.com/api/json/v1/1/filter.php?c=`;
 
 export default function Home() {
-  const { setKeyword, menu, keword } = useGlobalContext();
-  const inputRef = useRef(null);
-
   useGlobalFetch(url);
+  const { setKeyword, menu } = useGlobalContext();
+  const inputRef = useRef(null);
 
   function handleSubmit(e) {
     e.preventDefault();

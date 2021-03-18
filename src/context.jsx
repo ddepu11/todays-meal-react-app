@@ -1,13 +1,16 @@
-import { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useContext, useState } from "react";
 
 const AppContext = createContext();
 
 const AppProvider = ({ children }) => {
   const [menu, setMenu] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [keyword, setKeyword] = useState("");
 
   return (
-    <AppContext.Provider value={{ menu, setMenu, keyword, setKeyword }}>
+    <AppContext.Provider
+      value={{ menu, setMenu, keyword, setKeyword, loading, setLoading }}
+    >
       {children}
     </AppContext.Provider>
   );
