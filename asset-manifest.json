@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/todays-meal-react-app/static/css/main.667e3074.chunk.css",
-    "main.js": "/todays-meal-react-app/static/js/main.30054f71.chunk.js",
-    "main.js.map": "/todays-meal-react-app/static/js/main.30054f71.chunk.js.map",
+    "main.css": "/todays-meal-react-app/static/css/main.67485eed.chunk.css",
+    "main.js": "/todays-meal-react-app/static/js/main.46e4341f.chunk.js",
+    "main.js.map": "/todays-meal-react-app/static/js/main.46e4341f.chunk.js.map",
     "runtime-main.js": "/todays-meal-react-app/static/js/runtime-main.87a64e0f.js",
     "runtime-main.js.map": "/todays-meal-react-app/static/js/runtime-main.87a64e0f.js.map",
     "static/js/2.a16a9a4e.chunk.js": "/todays-meal-react-app/static/js/2.a16a9a4e.chunk.js",
     "static/js/2.a16a9a4e.chunk.js.map": "/todays-meal-react-app/static/js/2.a16a9a4e.chunk.js.map",
     "index.html": "/todays-meal-react-app/index.html",
-    "static/css/main.667e3074.chunk.css.map": "/todays-meal-react-app/static/css/main.667e3074.chunk.css.map",
+    "static/css/main.67485eed.chunk.css.map": "/todays-meal-react-app/static/css/main.67485eed.chunk.css.map",
     "static/js/2.a16a9a4e.chunk.js.LICENSE.txt": "/todays-meal-react-app/static/js/2.a16a9a4e.chunk.js.LICENSE.txt",
     "static/media/logo.3266670f.png": "/todays-meal-react-app/static/media/logo.3266670f.png"
   },
   "entrypoints": [
     "static/js/runtime-main.87a64e0f.js",
     "static/js/2.a16a9a4e.chunk.js",
-    "static/css/main.667e3074.chunk.css",
-    "static/js/main.30054f71.chunk.js"
+    "static/css/main.67485eed.chunk.css",
+    "static/js/main.46e4341f.chunk.js"
   ]
 }
