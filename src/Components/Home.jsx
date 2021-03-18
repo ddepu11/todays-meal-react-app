@@ -31,7 +31,7 @@ export default function Home() {
             <input
               ref={inputRef}
               type="text"
-              placeholder="Search Meal Ny Category"
+              placeholder="Search Meal By Category"
             />
             <button type="submit">Search</button>
             <span className="example">
